@@ -1,0 +1,13 @@
+{{form.as_ul}}
+{{form.as_p}}
+{{form.as_table}}
+
+<ul>
+    {% for i in carts %}
+        <p>{{ i.name_card }}</p>
+        <p> {{ i.number_card }} </p>
+        <p> {{ i.carts.last.money }} </p>
+        <p> <a href="/strelka/balance/{{ i.number_card }}">Проверить баланс</a> </p>
+    {% endfor %}
+    <h1>{{ balance }}</h1>
+</ul>
