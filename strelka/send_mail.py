@@ -40,7 +40,7 @@ def send_mail(recipients,subject,text):
     s.ehlo()
     s.starttls()
     s.ehlo()
-    s.login("shpalbl4a@gmail.com","n3n99lz76343")
+    s.login("xxxxx@gmail.com","xxxxx")
 
 	# Отправляем письмо
             
