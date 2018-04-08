@@ -47,7 +47,11 @@ def send_mail(recipients,subject,name,balance,number_cart):
     s.ehlo()
     s.starttls()
     s.ehlo()
+<<<<<<< HEAD
     s.login("*******@gmail.com","******")
+=======
+    s.login("xxxxx@gmail.com","xxxxx")
+>>>>>>> 5927986dd35ce5ff2d61a3bf159a98199a54b05c
 
 	# Отправляем письмо
             
