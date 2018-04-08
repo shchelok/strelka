@@ -36,5 +36,5 @@ for i in dataList:
 	cur.execute('select money from strelka_money WHERE "statMoney_id"={0} ORDER BY update_date  DESC limit 1;'.format(i[2]))
 	last_date_balance = cur.fetchall()
 	cur.close()
-	if balance/100 < 50: print("on cart wich number "+i[0]+" low balance : "+str(balance/100)+" yor balance was "+str(last_date_balance[0][0]))
-	if balance/100 < 50 and balance/100 != last_date_balance[0][0]: print("please ckeck cart")
+#	if float(balance)/100 < 50 and float(balance)/100 != float(last_date_balance[0][0]):
+	send_mail(["{0}".format(i[1])], "Strelka", i[3], str(float(balance)/100), i[0])
