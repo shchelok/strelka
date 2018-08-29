@@ -1,3 +1,6 @@
+{% extends "strelka/mainApp.html" %}
+{% block content %}
+
 {{form.as_ul}}
 {{form.as_p}}
 {{form.as_table}}
@@ -7,7 +10,9 @@
         <p>{{ i.name_card }}</p>
         <p> {{ i.number_card }} </p>
         <p> {{ i.carts.last.money }} </p>
-        <p> <a href="/strelka/balance/{{ i.number_card }}">Проверить баланс</a> </p>
+<!--         <p> <a href="/strelka/balance/{{ i.number_card }}">Проверить баланс</a> </p> -->
+		<p> <a href="/strelka/history/{{ i.number_card }}">Посмотреть историю</a></p>
     {% endfor %}
     <h1>{{ balance }}</h1>
 </ul>
+{% endblock %}

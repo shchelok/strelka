@@ -16,10 +16,19 @@ def index(request):
     return render(request, 'strelka/index.html', context)
 
 def balance(request, n):
-    balance = '11'
+    #balance = '11'
     balance = Cart.objects.filter(number_card=n)[0].checkCart()
     context = {"balance": balance}
     return render(request, 'strelka/balance.html', context)
+
+def history(request,n):
+    cart = Cart.objects.filter(number_card=n)[0]
+    # d = {}
+    # for date in cart.carts.order_by("-update_date")[:10]:
+    #     d.update({"date": date.update_date, "money": date.money})
+    context = {"date": cart.carts.order_by("-update_date")[:10]}
+    return render(request, 'strelka/history.html', context)
+        
 
 
 # def results(request, question_id):

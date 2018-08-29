@@ -1,5 +1,9 @@
+{% extends "strelka/mainApp.html" %}
+
+{% block content %}
 {{form.as_ul}}
 {{form.as_p}}
 {{form.as_table}}
 
 <h1>{{ balance }}</h1>
+{% endblock %}
