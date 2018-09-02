@@ -26,7 +26,7 @@ SECRET_KEY = 'xj7e0@=7wvxw=^9_9ld_k5rm(w5vv@58zd4i5t%v(%2fp)$og2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['strelka.my']
 
 
 # Application definition
